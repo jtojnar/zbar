@@ -1,0 +1,161 @@
+option(
+  'codes',
+  type: 'array',
+  choices: [
+    'ean',
+    'databar',
+    'code128',
+    'code93',
+    'code39',
+    'codabar',
+    'i25',
+    'qrcode',
+    'sqcode',
+  ],
+  # default to all
+  description: 'Select symbologies to compile',
+)
+
+option(
+  'threads',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for threaded applications',
+)
+
+option(
+  'doc',
+  type: 'boolean',
+  value: true,
+  description: 'Build docs',
+)
+
+option(
+  'video',
+  type: 'boolean',
+  value: true,
+  description: 'Build video scanner features',
+)
+
+option(
+  'directshow',
+  type: 'boolean',
+  value: true,
+  description: 'Compile directshow driver on Windows instead of vfw, available only when video support is enabled',
+)
+
+option(
+  'xshm',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for X shared memory extension',
+)
+
+option(
+  'xv',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for XVideo extension',
+)
+
+option(
+  'dbus',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for D-Bus',
+)
+
+option(
+  'dbusconfdir',
+  type: 'string',
+  value: '',
+  description: 'Path to D-Bus config directory',
+)
+
+option(
+  'jpeg',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for JPEG image conversions',
+)
+
+option(
+  'imagemagick',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for scanning images with ImageMagick',
+)
+
+option(
+  'graphicsmagick',
+  type: 'feature',
+  value: 'disabled',
+  description: 'Use GraphicsMagick alternative to ImageMagick',
+)
+
+option(
+  'npapi',
+  type: 'feature',
+  value: 'disabled',
+  description: 'Support for Firefox/Mozilla/OpenOffice plugin',
+)
+
+option(
+  'gtk',
+  type: 'combo',
+  choices: [
+    'disabled',
+    'auto',
+    'gtk2',
+    'gtk3',
+  ],
+  value: 'gtk2',
+  description: 'Specify support for GTK. Valid values are: disabled, auto, gtk2, gtk3 (default is gtk2)',
+)
+
+option(
+  'gir',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Generate GObject Introspection support files',
+)
+
+option(
+  'python',
+  type: 'combo',
+  choices: [
+    'disabled',
+    'auto',
+    'python2',
+    'python3',
+  ],
+  value: 'python2',
+  description: 'Specify support for Python. Valid values are: disabled, auto, python2, python3 (default is python2)',
+)
+
+option(
+  'qt',
+  type: 'combo',
+  choices: [
+    'disabled',
+    'auto',
+    'qt4',
+    'qt5',
+  ],
+  value: 'qt5',
+  description: 'Specify support for Qt. Valid values are: disabled, auto, qt4, qt5 (default is qt5)',
+)
+
+option(
+  'static_qt',
+  type: 'bool',
+  value: false,
+  description: 'Produce a static library for libzbarcam-qt support',
+)
+
+option(
+  'java_bindings',
+  type: 'feature',
+  value: 'enabled',
+  description: 'Support for Java interface',
+)
