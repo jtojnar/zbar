@@ -1,3 +1,5 @@
+pkgconfig_DATA = zbar.pc
+
 lib_LTLIBRARIES = libzbar.la
 libzbar_la_CPPFLAGS = $(AM_CPPFLAGS)
 libzbar_la_LDFLAGS = -no-undefined -version-info $(LIB_VERSION) \

@@ -818,7 +818,7 @@ Makefile
 gtk/Makefile
 java/Makefile
 zbar/Makefile
-zbar.pc
+zbar/zbar.pc
 zbar-gtk.pc
 zbar-qt.pc
 doc/doxygen.conf])
